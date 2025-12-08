@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="welcome-popup">
+		<div id="popup-content">
+			<h1>🥰</h1>
+			<h2>Welcome to my Japanese diary blog! はじめまして 🌸</h2>
+			<button class="popup" onclick="showQuote()">Quote of the Day</button>
+			<button id="close-popup" class="popup">Close</button>
+			<p id="quotes"></p>
+		</div>
+	</div>
+
+	<div id="page">
+		<div id="header">
+			<div id="navigation">
+				<span id="mobile-navigation">&nbsp;</span>
+				<a href="index.html" class="logo">
+					<h1>QUYNH GIAO</h1>
+				</a>
+				<ul id="menu">
+					<li class="selected">
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+					<li>
+						<a href="https://freewebsitetemplates.com/preview/running/index.html">Original Template</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="body" class="home">
+			<div class="header">
+				<div>
+					<h1>THE <span>JAPAN</span> <br> DIARIES</h1>
+					<hr>
+					<p>8-Week Journey of Self - Growth and Adventure</p>
+					<img src="images/banner.png" alt="">
+				</div>
+			</div>
+			<div class="body">
+				<div>
+					<h1>ANNIE DUONG</h1>
+					<p>
+						I'm a Vietnamese international student currently living in Kawagoe, Saitama.
+						<br>I love exploring new cultures, local food, and hidden gems in Japan.
+						<br>This project reflects my personal journey of cultural discovery and learning.
+					</p>
+					<a href="blog.html" class="more">Read More</a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div style="display: flex;">
+				<p>
+					&copy; 2025 by Dương Nguyễn Quỳnh Giao.
+					<br>
+					<br>ID: 4501104138.
+					<br>
+					<br> All rights reserved.
+				</p>
+				<p>
+					@ University of Economics and Business
+					<br>
+					<br>The University of Danang.
+					<br>
+					<br>Email: giao170506@gmail.com
+				</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.addEventListener("load", function () {
+			const popup = document.getElementById("welcome-popup");
+			const closeBtn = document.getElementById("close-popup");
+
+			closeBtn.addEventListener("click", function () {
+			popup.style.display = "none";
+			});
+		});
+		function showQuote() {
+			const quotes = [
+				"Keep going, you're doing great!",
+				"Every day is a fresh start.",
+				"Don't forget to smile today :)",
+				"Small steps still move you forward."
+			];
+			document.getElementById("quotes").textContent = quotes[Math.floor(Math.random() * quotes.length)];
+		}
+	</script>
+
+</body>
+</html>
